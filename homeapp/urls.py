@@ -4,6 +4,6 @@ from . import views
 app_name = 'homeapp'
 urlpatterns = [
     # homeというURLが呼び出されたらhomefuncを呼び出す
-    path('home/', views.homefunc.as_view(), name='home'),
+    path('home/', views.HomeView.as_view(), name='home'),
     path('inquiry/', views.InquiryView.as_view(), name='inquiry'),
 ]

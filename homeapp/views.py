@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 # クラスベースビュー
 # ホーム画面
-class homefunc(generic.TemplateView):
+class HomeView(generic.TemplateView):
     template_name = "home.html"
 
 # お問い合わせ画面
