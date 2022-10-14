@@ -1,0 +1,32 @@
+・仮想サーバの作り方（作成済み）
+    python -m venv venv
+
+
+・仮想サーバの入り方(入った状態で操作していく）
+    windows → .\venv\Scripts\activate
+    Linux　 → source venv/bin/activate
+
+
+・djangoのインストール方法
+    pip install django==バージョン(今回は3.2で作成)
+
+
+・使用モジュール
+    pip install django-rest-framework django-widgets-improved Pillow
+
+    django-rest-framework = DjangoでAPIを開発するために利用されるライブラリ
+    django-widgets        = フォームを整えるためのライブラリ
+    Pillow                = 画像を扱うライブラリ
+
+
+・djangoのプロジェクトの立ち上げ方
+    django-admin startproject プロジェクト名 .
+
+
+・djangoのアプリの立ち上げ方
+    python manage.py startapp アプリ名
+
+
+・サーバの起動方法
+    python manage.py runserver
+

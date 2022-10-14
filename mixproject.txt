@@ -1,0 +1,51 @@
+chatapp --山本作成
+
+・使用ライブラリ
+django==3.2
+psycopg2-binary==2.9.1
+
+bootstrap
+
+・エラーが出た場合の処理
+
+    if ～
+    　処理
+    try:
+        処理(ここでの処理でエラーが発生したらexceptに行く）
+    except (エラー内容):
+        エラー時の処理
+
+    ※エラー内容により処理の分岐可能
+
+・renderメソッド  ftom django.shortcuts import render
+
+    HTTPレスポンスを生成するためのメソッド
+    （HTTPリクエスト→新しいページの閲覧や情報の登録などの要求
+    　HTTPレスポンス→受け取ったリクエストの結果(HTML)を表示）
+
+    render( request, 'htmlファイル', 辞書型データ(htmlに渡される）
+            request, 'signup.hyml,   {'some':100}
+
+・renderとredirectの違い
+    render →　同じURLでHTMLファイルを変える
+    redirect →　URLごと変える
+
+
+・ユーザを作成するためには、組み込まれている create_user() という関数を利用する
+    from django.contrib.auth.models import User
+    user = User.objects.create_user('ユーザ名', 'メアド(いらない場合は空白)', 'パスワード')
+
+    スーパーユーザは以下で作成
+    python manage.py createsuperuser
+
+
+・GETメソッドとPOSTメソッドの違い
+    GETは指定したリソースの表現を転送するようにリクエストするメソッドです。
+    つまり、何か情報を検索したり取得するために使うためのメソッドになります。
+
+    POSTは指定したリソースを実装した機能に従って処理をする機能になります。
+    主に登録処理や更新処理などの、書き込みがありリソースが更新される可能性のある処理に対して使うメソッドになります。
+
+    GETはURLにパラメータをクエリとして追加、POSTはBodyにパラメータを付加できる
+
+

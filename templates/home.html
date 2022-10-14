@@ -1,0 +1,17 @@
+<!-- base.htmlを引用してくる -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+ホーム
+{% endblock %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+<!-- スタートのロゴ -->
+<div class="start">
+    <p><img src="{% static 'homeapp/rogo(仮).jpg' %}" alt=""></p>
+</div>
+{% endblock content %}

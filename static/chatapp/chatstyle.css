@@ -1,0 +1,52 @@
+
+/* 画面左 */
+.base {
+    position:fixed;
+    width:22%;
+    height:100%;
+    border-right: 2px solid;
+    border-color: #9e9e9e;
+}
+
+.w90{
+    width:95%;
+}
+
+.grouplist {
+    left:0px;
+}
+
+.grouplist ul {
+    list-style: none;
+    padding-left: 4px;
+}
+
+.list {
+    line-height: 65px;
+    border-bottom: 1px solid;
+    border-color: #9e9e9e;
+}
+
+/* 画面右 */
+.base2 {
+    position:fixed;
+    left:22%;
+    width:100%;
+    height:100%;
+}
+
+.base2 header {
+    font-size: 20px;
+    height:50px;
+    border-bottom:2px solid;
+    border-color:#9e9e9e;
+}
+
+.sendform {
+    width:100%;
+    position:fixed;
+    bottom:10px;
+    border-top:2px solid;
+    border-color:#9e9e9e;
+}
+
