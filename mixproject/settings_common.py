@@ -42,9 +42,9 @@ INSTALLED_APPS = [
     'chatapp.apps.ChatappConfig',
     'accounts.apps.AccountsConfig',
 
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account',
+    # 'django.contrib.sites',
+    # 'allauth',
+    # 'allauth.account',
 ]
 
 MIDDLEWARE = [
@@ -188,7 +188,7 @@ MESSAGE_TAGS = {
     messages.SUCCESS: 'alert alert-success',
     messages.INFO: 'alert alert-info',
 }
-
+"""
 # django-allauthで利用するdjango.contrib.sitesを使うためにサイト識別用IDを設定
 SITE_ID = 1
 
@@ -203,16 +203,16 @@ AUTHENTICATION_BACKENDS = (
 # メールアドレス認証に変更する設定
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_USERNAME_REQUIRED = False
-
+"""
 # ログイン・ログアウト後の遷移先を設定
-LOGIN_REDIRECT_URL = 'homeapp:home'
-ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
+# LOGIN_REDIRECT_URL = 'homeapp:home'
+# ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
 # ログアウトリンクのクリック一発でログアウトする設定
-ACCOUNT_LOGOUT_ON_GET = True
+# ACCOUNT_LOGOUT_ON_GET = True
 
 # django-allauthが送信するメールの件名に自動付与されるプレフィックスをブランクにする設定
-ACCOUNT_EMAIL_SUBJECT_PREFIX = ''
+# ACCOUNT_EMAIL_SUBJECT_PREFIX = ''
 
 # デフォルトのメール送信先を設定
-DEFAULT_FROM_EMAIL = os.environ.get('FROM_EMAIL')
+# DEFAULT_FROM_EMAIL = os.environ.get('FROM_EMAIL')
