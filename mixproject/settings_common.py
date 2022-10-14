@@ -168,8 +168,8 @@ LOGGING = {
     'formatters': {
         'dev': {
             'format': '\t'.join([
-                '%(pastime)s',
-                '[%(level)s]',
+                '%(asctime)s',
+                '[%(levelname)s]',
                 '%(pathname)s(Line:%(lineno)d',
                 '%(message)s'
             ])
